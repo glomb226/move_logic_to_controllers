@@ -16,7 +16,10 @@ class ProductsController < ApplicationController
       else
         format.html { render :action => "new" }
         format.json { render :json => @product.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
+      end #if
+    end #else
+  end #create
+  def new
+    @product = Product.new(:name =>'product name', :price => 69)
+  end #new
 end
