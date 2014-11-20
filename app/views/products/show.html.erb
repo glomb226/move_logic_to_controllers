@@ -7,4 +7,4 @@
   <b>Price:</b>
   <%= @product.price %>
 </p>
-<%= link_to 'Destroy', @product, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+<%= button_to 'Destroy', @product, :method => :delete, :onclick => "return confirm('Are you sure you want to delete this post?')" %>
